@@ -1,12 +1,10 @@
 require "Geocoder"
-require 'net/http'
-ip = Net::HTTP.get URI "https://api.ipify.org"
-class User
-    attr_accessor(:ip)
-    def initialize(ip)
-    @ip = ip
+require "net/http"
+class User    
+    attr_reader(:ip)
+    def initialize
+        @ip = Net::HTTP.get URI "https://api.ipify.org"
     end
-
     def country
         Geocoder.search(@ip).first.country
     end
@@ -17,4 +15,3 @@ class User
         Geocoder.search(@ip).first.coordinates
     end
 end
-user = User.new(ip)
