@@ -1,5 +1,5 @@
 ## Software Development Plan
-<sub>by KC Sheng</sub>
+#####by KC Sheng
 
 ### Statement of purpose and scope:
 
@@ -41,13 +41,14 @@ Following many trials and errors, I have decided to use the net/http library com
 Unlike the international news, fetching the national news requires an English news site for each country. With the limit time to finish the first stage of the project, it is not feasible to include multiple countries. Hence, I have only set up a site for Australia. Australia will also be the temporary default for users who are located elsewhere, even though geocode will still locate which country the user is located. In future updates, I hope to include more countries through collaborative effort worldwide.
 
 In terms of extracting text by css, because the css style is dramatically different from site to site, a lengthy css name with spaces can be especially challenging. With many trials and errors, I manage to finally settle on sites that work well with my trial exercises.
-###
 
 ### The ability of the program to display the content with aesthetics.
-For the reading pleasure of the user, I aim to display the content in an eye-pleasing way. The text will ideally be boxed content will ideally be displayed in the centre of screen. I use tty gem to properly display the choice. With the content, they will be well spaced to be read easily. There will be a daily quote also shown at the bottom of the screen, in addition to the news. The welcome screen will be ascii art. At the beginning the user will be asked to select an option from the menu. The option will lead them to the content. I will also implement the slow type feature on the screen to enhance the visual effect.
+For the reading pleasure of the user, I aim to display the content in an eye-pleasing way. The text will ideally be block or boxed content displayed in the screen. With the aid of tty gem, I hope to enhance the user's experience. The welcome screen will be ascii art. At the beginning the user will be asked to select an option from the menu. The option will lead them to the content. I may implement the slow type feature on the screen to enhance the visual effect.
 
 ### User interaction and experience
 At the beginning of the program, the user will see a welcome screen which displays 3 options: International news, national news and local weather. The user will use arrow keys to select appropriate option. This ensures the consistency of the input with no room for an error.
 
 ### Status update
-Update 1: Web scraping relying on CSS selectors and names are quite tricky. The way that I use nokogiri is, first looking for the closest css selector and then testing it against array index to find top 3 headlines. I am forced to abandon some news sites as their css does not conform with this methodology. These sites usually require the use of XML path expression syntax to locate the target text, as their css selectors have very long names with spaces.
+Update 1: Web scraping relying on CSS selectors and names are quite tricky. The way that I use nokogiri is, first looking for the closest css selector and then testing it against array index to find top 3 headlines. I am forced to abandon some news sites as their css do not conform with my methodology. These sites usually require the use of XML path expression syntax to locate the target text.
+
+Update 2: The other challenge I face is how I can organise and retrieve the data of website urls and their css selectors that have passed my initial selection test in a clean way. I have finally decided to use superclass and subclass relationship to deal with this problem. I can assign specific data to the subclass instance variables which are inherited from the superclass.

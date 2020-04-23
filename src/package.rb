@@ -1,40 +1,43 @@
 require_relative "./user"
-
-# Workable sites with workable title and its content  
-class SiteCss
-    attr_accessor(:site, :title_css, :content_css)
-    def initialize(site, title_css, content_css)
-        @site = site
+# Implement inheritance to package data for scraping
+class Site
+    attr_accessor(:url, :title_css, :content_css)
+    def initialize(url, title_css, content_css)
+        @url = url
         @title_css = title_css
         @content_css = content_css
     end
+    def package
+        [@url, @title_css, @content_css]
+    end
 end
 
-class InternationCss < SiteCss
+class Internation < Site
     def initialize
         super("https://www.reuters.com/news/archive/worldNews", "h3.story-title", "p")
     end
 end
 
-class SportsCss < SiteCss
+class Sports < Site
     def initialize
         super("https://www.reuters.com/news/archive/sportsNews", "h3.story-title", "p")
     end
 end
 
-class NationCss < SiteCss
+class Nation < Site
     user = User.new
-    case user.country
+# Australia is set as a temporary default. In the furture, more countries can be added.
+# Case/when is used to reflect this.
+# Sites added must pass a simple function (specified in the doc).
+    case user.country    
     when "AU"
         def initialize
             super("https://www.news.com.au/", "h4.heading", "span.standfirst-text")
         end
-    else
-        # Australia is a temporary default. In the furture, more countries can be added.
+    else        
         def initialize
             super("https://www.news.com.au/", "h4.heading", "span.standfirst-text")
         end
     end
 end
-
 
