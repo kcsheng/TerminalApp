@@ -10,3 +10,4 @@
 * 22/04/20 17:00 - Flowchart created
 * 22/04/20 19:00 - Trello set up
 * 23/04/20 9:00 - Initialise git and github repo
+* 23/04/20 12:00 - Banner design
