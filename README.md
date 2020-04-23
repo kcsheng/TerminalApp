@@ -1,5 +1,5 @@
 ## Software Development Plan
-#####by KC Sheng
+by KC Sheng
 
 ### Statement of purpose and scope:
 The terminal is an essential tool for Mac and Linux and I have always been intrigued by its power to accomplish immense tasks in the operation system. People who work with terminal on a daily basis do not necessarily have an access to a web browser, to look up the content on the internet. It would be ideal to develop a terminal software that is capable of fetching important information from the web, such as news and sports update for a quick read.
