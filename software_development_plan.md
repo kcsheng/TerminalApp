@@ -2,7 +2,7 @@
 <sub>by KC Sheng</sub>
 
 ### Statement of purpose and scope:
-The terminal is an essential tool for Mac and Linux and I have always been intrigued by its power to accomplish immense tasks in the operation system. People who work with terminal on a daily basis do not necessarily have an access to a web browser, to look up the content on the internet. It would be ideal to develop a terminal software that is capable of fetching important information from the web, such as news and sports update for a quick read. 
+The terminal is an essential tool for Mac and Linux and I have always been intrigued by its power to accomplish immense tasks in the operation system. People who work with terminal on a daily basis do not necessarily have an access to a web browser, to look up the content on the internet. It would be ideal to develop a terminal software that is capable of fetching important information from the web, such as news and sports update for a quick read.
 
 This app will provide three options to the user including international and national headlines and sports. Other features, such as weather, lifestyle and finance, may be implemented in the future. This app will be able to display international news and sports headlines upon release. With the national headlines, it requires significant amount of effort to identify the new source in different countries. As such, there will be only one country (Australia) to start off when the app is launched. This app is however equipped with the ability to identify the geographical location of the user. In future update, there will be more countries included. Some users will then have the opportunity to view their national news from the terminal. For now, Australia is set as the default.
 
@@ -19,10 +19,11 @@ There are a few methods available on the web for scraping content from a website
 
 I use httparty to first obtain the the raw content from a website and pass it to nokogiri which then parse the html in a format that is extractable. Byebug is debugger that allows me to interact with the variables and select the final result. The trial code for implementation is demonstrated as below.
 
+```
 require "nokogiri"
 require "httparty"
 require "byebug"
-```
+
 def scrape
     url = "https://www.reuters.com/news/archive/worldNews"
     unparsed_page = HTTParty.get(url)
@@ -31,7 +32,7 @@ def scrape
 end
 ```
 
-By inspecting the site using the chrome extension, I first locate where the target elements are. Nokogiri gem recognises the content through css. However, finding the right pattern for extraction is a highly demanding task. For the international news, I extract headline and its content as a pair into a hash. Top three headlines are extracted and stored. Once the elements are successfully selected. They can then be displayed without the requirement of byebug. 
+By inspecting the site using the chrome extension, I first locate where the target elements are. Nokogiri gem recognises the content through css. However, finding the right pattern for extraction is a highly demanding task. For the international news, I extract headline and its content as a pair into a hash. Top three headlines are extracted and stored. Once the elements are successfully selected. They can then be displayed without the requirement of byebug.
 
 Similar to the international headlines, sports headlines will also be extracted, stored and displayed.
 
@@ -48,5 +49,3 @@ For the reading pleasure of the user, I aim to display the content in an eye-ple
 
 ### User interaction and experience
 At the beginning of the program, the user will see a welcome screen which displays 3 options: International news, national news and local weather. The user will use arrow keys to select appropriate option. This ensures the consistency of the input with no room for an error.
-
-
