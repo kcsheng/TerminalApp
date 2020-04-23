@@ -48,3 +48,6 @@ For the reading pleasure of the user, I aim to display the content in an eye-ple
 
 ### User interaction and experience
 At the beginning of the program, the user will see a welcome screen which displays 3 options: International news, national news and local weather. The user will use arrow keys to select appropriate option. This ensures the consistency of the input with no room for an error.
+
+### Status update
+Update 1: Web scraping relying on CSS selectors and names are quite tricky. The way that I use nokogiri is, first looking for the closest css selector and then testing it against array index to find top 3 headlines. I am forced to abandon some news sites as their css does not conform with this methodology. These sites usually require the use of XML path expression syntax to locate the target text, as their css selectors have very long names with spaces.
