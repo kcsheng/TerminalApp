@@ -15,3 +15,4 @@
 * 23/04/20 20:30 - local news match finalised
 * 24/04/20 08:40 - Fetch headlines finalised
 * 24/04/20 14:00 - Solve a deprecation bug of httparty gem
+* 24/04/20 17:20 - Main program set up

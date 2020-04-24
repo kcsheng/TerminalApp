@@ -24,12 +24,10 @@ class View
                 puts "Reuters top 3 sports headlines are: ".colorize(:blue)
                 show_news("sports news")
         end
+        puts "Press any key to continue."
+        STDIN.getch
         @browse = false
     end
 end
-
-
-
-
 
 

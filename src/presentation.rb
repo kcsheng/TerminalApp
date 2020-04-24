@@ -68,6 +68,3 @@ def show_news(selection)
     puts fast_type(v)
   end
 end
-
-
-

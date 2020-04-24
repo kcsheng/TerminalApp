@@ -1,5 +1,5 @@
 ## Software Development Plan
-#####by KC Sheng
+by KC Sheng
 
 ### Statement of purpose and scope:
 
