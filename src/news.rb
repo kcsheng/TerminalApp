@@ -6,13 +6,14 @@ logo
 indent
 type("Welcome to News Express! Press any key to continue...")
 STDIN.getch
-clear
-br
+
 class View
     @browse = true
     @result
-    while @browse        
-        @result = case main_menu        
+    while @browse 
+        clear   
+        br
+        @result = case main_menu  
             when "World News"
                 puts "Reuters top 3 headlines are: ".colorize(:blue)
                 show_news("world news")
@@ -23,11 +24,20 @@ class View
             when "International Sports"
                 puts "Reuters top 3 sports headlines are: ".colorize(:blue)
                 show_news("sports news")
+            when "Quit"
+                br
+                indent
+                type("Bye now. Have a great day!")
+                @browse = false
         end
-        puts "Press any key to continue."
         STDIN.getch
-        @browse = false
+        clear
     end
 end
+
+
+
+
+
 
 
