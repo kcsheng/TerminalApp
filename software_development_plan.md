@@ -26,7 +26,7 @@ require "byebug"
 def scrape
     url = "https://www.reuters.com/news/archive/worldNews"
     unparsed_page = HTTParty.get(url)
-    parsed_page = Nokogiri::HTML(unparsed_page)    
+    parsed_page = Nokogiri::HTML(unparsed_page.body)    
     byebug
 end
 ```
