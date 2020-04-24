@@ -1,4 +1,5 @@
 require_relative "./user"
+
 # Implement inheritance to package data for scraping
 class Site
     attr_accessor(:url, :title_css, :content_css)
@@ -28,7 +29,7 @@ class Nation < Site
     user = User.new
 # Australia is set as a temporary default. In the furture, more countries can be added.
 # Case/when is used to reflect this.
-# Sites added must pass a simple function (specified in the doc).
+# Sites added here must have passed the preliminary test with scrape function in fetch.rb.
     case user.country    
     when "AU"
         def initialize

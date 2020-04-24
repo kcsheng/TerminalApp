@@ -10,7 +10,7 @@ class Headlines
     end
     def scrape
         unparsed_page = HTTParty.get(@url)
-        parsed_page = Nokogiri::HTML(unparsed_page)
+        parsed_page = Nokogiri::HTML(unparsed_page.body)
         top_3_news = Hash.new
         (0..2).each do |n|
             title = parsed_page.css(@title)[n].text.delete("\n""\t")
@@ -20,5 +20,4 @@ class Headlines
         return top_3_news
     end
 end
-p Headlines.new(Internation.new.package).scrape
 
