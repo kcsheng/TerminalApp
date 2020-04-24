@@ -4,7 +4,7 @@ require 'io/console'
 clear
 logo
 indent
-type("Welcome to News Express! Press any key to continue...")
+type("Welcome to News Express! Press any key to continue...".colorize(:blue))
 STDIN.getch
 
 class View
@@ -15,19 +15,22 @@ class View
         br
         @result = case main_menu  
             when "World News"
-                puts "Reuters top 3 headlines are: ".colorize(:blue)
+                br
+                puts "Reuters current top 5 headlines are: ".colorize(:blue)
                 show_news("world news")
             when "National News"
+                br
                 country_site = Nation.new.package[0]
-                puts "#{country_site} top 3 headlines are: ".colorize(:blue)
+                puts "#{country_site} current top 5 headlines are: ".colorize(:blue)
                 show_news("national news")
             when "International Sports"
-                puts "Reuters top 3 sports headlines are: ".colorize(:blue)
+                br
+                puts "Reuters current top 5 sports headlines are: ".colorize(:blue)
                 show_news("sports news")
             when "Quit"
                 br
                 indent
-                type("Bye now. Have a great day!")
+                type("Bye now. Have a great day!".colorize(:blue))
                 @browse = false
         end
         STDIN.getch
