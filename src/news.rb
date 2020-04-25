@@ -9,41 +9,20 @@ type("Welcome to News Express! Press any key to continue...".colorize(:blue))
 pause
 
 def show_news(selection)
-    headlines = case selection
-    when "world news"
-        begin
-            Headlines.new(Internation.new.package).scrape
-        rescue 
-            puts "
-            The international news is currently unavailable! 
-            Press any key to return to the main menu.
-            ".colorize(:red)
-            pause
-            return
-        end     
-    when "national news"
-        begin 
-            Headlines.new(Nation.new.package).scrape
-        rescue 
-            puts "
-            The national news is currently unavailable! 
-            Press any key to return to the main menu.
-            ".colorize(:red)
-            pause
-            return      
-        end
-    when "sports news"
-        begin
-            Headlines.new(Sports.new.package).scrape
-        rescue 
-            puts "
-            The international sports news is currently unavailable! 
-            Press any key to return to the main menu.
-            ".colorize(:red)
-            pause
-            return
-        end
-    end  
+    begin
+      headlines = case selection
+        when "world news"
+              Headlines.new(Internation.new.package).scrape
+        when "national news"
+              Headlines.new(Nation.new.package).scrape
+        when "sports news"
+              Headlines.new(Sports.new.package).scrape
+      end
+    rescue
+        no_service
+        pause
+        return
+    end
     headlines.each do |k, v|
         br
         puts k.colorize(:cyan)
@@ -55,12 +34,12 @@ def show_news(selection)
     print "Press any key to return to the main menu."
     pause
     clear
-end  
+end
 
 loop do
-    clear   
+    clear
     br
-    case main_menu  
+    case main_menu
         when "World News"
             br
             puts "Reuters current top 5 headlines are: ".colorize(:blue)
@@ -83,12 +62,3 @@ loop do
             break
     end
 end
-
-
-
-
-
-
-
-
-
