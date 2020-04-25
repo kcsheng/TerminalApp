@@ -20,3 +20,5 @@
 * 24/04/20 21:00 - Error handling added
 * 25/04/20 09:00 - Software development plan updated
 * 25/04/20 11:30 - Implementation updated
+* 25/04/20 12:00 - Flowchart modified
+* 25/04/20 13:00 - Program run screenshots created
