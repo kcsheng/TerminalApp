@@ -18,3 +18,4 @@
 * 24/04/20 17:20 - Main program set up
 * 24/04/20 19:00 - Main program bug fix
 * 24/04/20 21:00 - Error handling added
+* 25/04/20 09:00 - Software development plan updated
