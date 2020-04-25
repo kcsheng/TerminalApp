@@ -1,12 +1,17 @@
 require "Geocoder"
 require "net/http"
+require "colorize"
 class User    
     attr_reader(:ip)
     def initialize
         begin
         @ip = Net::HTTP.get URI "https://api.ipify.org"
         rescue SocketError
-            puts "There is no internet connection!"
+            puts "
+            
+            There is no internet connection!
+
+            ".colorize(:red)
             exit
         end
     end

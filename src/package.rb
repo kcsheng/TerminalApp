@@ -13,6 +13,7 @@ class Site
     end
 end
 
+# css selectors need to pass the scraping function in fetch.rb, in order to be listed here.
 class Internation < Site
     def initialize
         super("https://www.reuters.com/news/archive/worldNews", "h3.story-title", "p")
