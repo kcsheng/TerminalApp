@@ -10,7 +10,7 @@ pause
 
 def show_news(selection)
     headlines = case selection
-      when "world news"
+    when "world news"
         begin
             Headlines.new(Internation.new.package).scrape
         rescue 
@@ -21,7 +21,7 @@ def show_news(selection)
             pause
             return
         end     
-      when "national news"
+    when "national news"
         begin 
             Headlines.new(Nation.new.package).scrape
         rescue 
@@ -32,7 +32,7 @@ def show_news(selection)
             pause
             return      
         end
-      when "sports news"
+    when "sports news"
         begin
             Headlines.new(Sports.new.package).scrape
         rescue 
@@ -45,10 +45,10 @@ def show_news(selection)
         end
     end  
     headlines.each do |k, v|
-      br
-      puts k.colorize(:cyan)
-      fast_type(v)
-      br
+        br
+        puts k.colorize(:cyan)
+        fast_type(v)
+        br
     end
     br
     br
@@ -60,7 +60,7 @@ end
 loop do
     clear   
     br
-    result = case main_menu  
+    case main_menu  
         when "World News"
             br
             puts "Reuters current top 5 headlines are: ".colorize(:blue)
@@ -83,6 +83,7 @@ loop do
             break
     end
 end
+
 
 
 
