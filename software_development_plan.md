@@ -54,9 +54,8 @@ Update 1: Web scraping relying on CSS selectors and names are quite tricky. The 
 Update 2: I have encountered a road block where I can display the news in terminal but there is always a deprecation warning associated with the httparty. After few hours of troubleshooting, I have realised that, instead of using "Nokogiri::HTML(unparsed_page)", I should have used "parsed_page = Nokogiri::HTML(unparsed_page.body)"! Passing in the page body and not the page itself makes a critical difference.
 
 ### Implementation
-
-App features | Checklist | Implementation
------------- | --------- | --------------
+Features   |   Checklist   |    Implementation
+----------------- | ------------- | --------------
 Welcome screen | ASCII art for the name of the game. The screen will pause to continue when the user is ready.  | Use ASCII art generator to generate a suitable image. The pause function will be implemented using STDIN.getch
 Main menu | - The main menu will provide 4 options: a) International news, b) National news, c) International sports news, d) quit. The user will be able to use up and down arrow key to select. | TTY-prompt gem will be used to implement this function, with selected item highlighted with a colour.
 Show news headlines and their content | Ideally the app will display the top 5 headlines to the user. These headlines will be evenly spaced with some color highlight. | Use a combination of "httparty", "nokogiri" gems for web scraping. Use the "colorize" gem to add color to the text string. Use "Geocoder" gem and built-in library "net/http" to identify the user location, which is then used to match the news of the user's country. I will effectily use commands to place line space or screen clear to ensure a good experience when browsing the news. Implement fast-type to add interest to the user when viewing the headlines.
