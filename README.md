@@ -2,6 +2,7 @@
 by KC Sheng
 
 ### Statement of purpose and scope:
+The terminal is an essential tool for Mac and Linux and I have always been amazed by its power to accomplish  tasks in the operation system. People who work with terminal on a daily basis do not necessarily have an access to a web browser, to look up the content on the internet. It would be ideal to develop a handy terminal app that is capable of fetching important information from the web, such as news and sports update for a quick read/overview.
 
 This app will provide three options to the user including international and national headlines and sports. Other features, such as weather, lifestyle and finance, may be implemented in the future. This app will be able to display international news and sports headlines upon release. With the national headlines, it requires significant amount of effort to identify the new source in different countries. As such, there will be only one country (Australia) to start off when the app is launched. This app is however equipped with the ability to identify the geographical location of the user. In future updates, there will be more countries included. Some users will then have the opportunity to view their national news from the terminal. For now, Australia is set as the default.
 
