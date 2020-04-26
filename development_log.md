@@ -24,3 +24,6 @@
 * 25/04/20 13:00 - Program run screenshots created
 * 25/04/20 17:00 - Issue with word split at new line
 * 26/04/20 13:00 - Fixed word split issue at new line
+* 26/04/20 14:00 - code refactored (DRY)
+* 26/04/20 16:00 - Validate my app with additional tests
+* 26/04/20 18:00 - Presentation file made

@@ -52,7 +52,7 @@ At the beginning of the program, the user will see a welcome screen which displa
 ### Status update
 Update 1: I have encountered a road block where I can display the news in terminal but there is always a deprecation warning associated with the httparty. After few hours of troubleshooting, I have realised that, instead of using "Nokogiri::HTML(unparsed_page)", I should have used "parsed_page = Nokogiri::HTML(unparsed_page.body)"! Passing in the page body and not the page itself makes a critical difference with that deprecation error!
 
-Update 2: Another issue I have encountered is how the terminal displays the text character-by-character. Although the display is quite neat, this often causes a split word at the end of the line that continues to the start of the next line. I have extensively researched and tried different approaches. Eventually, I discover the "word_wrap" gem that allows me to display a length of text without the word split issue.  
+Update 2: Another problem I have faced is how the terminal displays the text character-by-character. Although the display is quite neat, this often causes a split word at the end of the line that continues to the start of the next line. I have extensively researched and tried different approaches. Eventually, I discover the "word_wrap" gem that allows me to display a block of text without the word split issue.  
 
 ### Implementation plan
 Features   |   Checklist   |    Implementation
