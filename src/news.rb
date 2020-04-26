@@ -26,13 +26,14 @@ def show_news(selection)
         return
     end
     headlines.each do |key, value|
-        br      
+        br
+        # Use word_wrap gem to overcome the word split issue at the end of each line.
         print (key.fit).colorize(:cyan)
         wrap_value = value.fit
         fast_type(wrap_value)
-        br
     end
-    print "Press any key to return to the main menu."
+    br
+    print "Press any key to return to the main menu.".colorize(:blue)
     pause
     clear
 end
