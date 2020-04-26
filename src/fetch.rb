@@ -20,4 +20,3 @@ class Headlines
         return top_5_news
     end
 end
-

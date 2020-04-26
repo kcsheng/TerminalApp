@@ -1,6 +1,8 @@
 require_relative "./presentation"
 require 'io/console'
 require "./fetch"
+require "word_wrap"
+require 'word_wrap/core_ext'
 
 clear
 logo
@@ -23,14 +25,13 @@ def show_news(selection)
         pause
         return
     end
-    headlines.each do |k, v|
-        br
-        puts k.colorize(:cyan)
-        fast_type(v)
+    headlines.each do |key, value|
+        br      
+        print (key.fit).colorize(:cyan)
+        wrap_value = value.fit
+        fast_type(wrap_value)
         br
     end
-    br
-    br
     print "Press any key to return to the main menu."
     pause
     clear

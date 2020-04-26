@@ -1,18 +1,6 @@
-class Animal
-    attr_accessor( :name, :num_legs)
-    def initialize(name, num_legs)
-        @name = name
-        @num_legs = num_legs
-    end
-end
+require "test/unit/assertions"
+include Test::Unit::assertions
 
-class Dog < Animal
-    def initialize
-        super(name, 4)
-    end
-end
+hello = "HELLO"
 
-dog = Dog.new
-p dog.num_legs
-dog.name = "Bob"
-p dog.name
+assert_equal "HELLO", hello, "Hello function should return 'world'"
