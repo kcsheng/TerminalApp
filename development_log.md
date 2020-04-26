@@ -8,7 +8,7 @@
 * 22/04/20 09:30 - Link gems functions
 * 22/04/20 16:00 - Finalise App development plan
 * 22/04/20 17:00 - Flowchart created
-* 22/04/20 19:00 - [Trello](https://trello.com/b/7UFhq0Hd/news-express-app) set up
+* 22/04/20 19:00 - Set up [Trello](https://trello.com/b/7UFhq0Hd/news-express-app)
 * 23/04/20 09:00 - Initialise git and github repo
 * 23/04/20 12:00 - Banner design
 * 23/04/20 14:00 - User class finalised
@@ -24,6 +24,7 @@
 * 25/04/20 13:00 - Program run screenshots created
 * 25/04/20 17:00 - Issue with word split at new line
 * 26/04/20 13:00 - Fixed word split issue at new line
-* 26/04/20 14:00 - code refactored (DRY)
+* 26/04/20 14:00 - Refactor code (DRY)
 * 26/04/20 16:00 - Validate my app with additional tests
 * 26/04/20 18:00 - Presentation file made
+* 26/04/20 19:00 - All tests completed
