@@ -43,8 +43,8 @@ Unlike the international news, fetching the national news requires an English ne
 
 In terms of extracting text by css, because the css style is dramatically different from site to site, a lengthy css name with spaces can be especially challenging. With many trials and errors, I manage to finally settle on sites that work well with my trial function.
 
-### The ability of the program to display the aesthetic content.
-For the reading pleasure of the user, I aim to display the content in an eye-pleasing way. The text will ideally be displayed in the screen with proper spacing. With the aid of tty gem, I hope to enhance the user's browsing experience. The welcome screen will be ascii art. At the beginning the user will be asked to select an option from the menu. The option will lead them to the content. I will implement the slow/fast type feature on the screen for the visual effect.
+### The ability of the program to display the proper layout for viewing.
+For the reading pleasure of the user, I will apply colours. The content will be displayed in text blocks with proper spacing. I will set up a menu using tty gem. The welcome screen will be ascii art. At the beginning the user will be asked to select an option from the menu. The option will lead them to the content. I will implement the slow/fast type feature on the screen for the visual effect.
 
 ### User interaction and experience
 At the beginning of the program, the user will see a welcome screen which displays 3 options: international news, national news and international sports. The user will use up and down arrow keys to select an appropriate option. This ensures the consistency of the input with little room for error. The user will be able to access 5 most recent headlines with a live update almost every few hours.
