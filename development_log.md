@@ -22,4 +22,5 @@
 * 25/04/20 11:30 - Implementation updated
 * 25/04/20 12:00 - Flowchart modified
 * 25/04/20 13:00 - Program run screenshots created
+* 25/04/20 17:00 - Issue with word split at new line
 * 26/04/20 13:00 - Fixed word split issue at new line

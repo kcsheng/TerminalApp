@@ -50,9 +50,9 @@ For the reading pleasure of the user, I aim to display the content in an eye-ple
 At the beginning of the program, the user will see a welcome screen which displays 3 options: International news, national news and local weather. The user will use arrow keys to select appropriate option. This ensures the consistency of the input with no room for an error. The user will be able to access 5 most recent headlines with a live update at least every few hours.
 
 ### Status update
-Update 1: Web scraping relying on CSS selectors and names is quite tricky. The way that I use nokogiri is, first looking for the closest css selector and then testing it against array index to find top 5 headlines. I am forced to abandon some news sites as their css do not conform with my function in selecting css. These sites usually require the use of XML path expression or advanced syntax to locate the target text.
+Update 1: I have encountered a road block where I can display the news in terminal but there is always a deprecation warning associated with the httparty. After few hours of troubleshooting, I have realised that, instead of using "Nokogiri::HTML(unparsed_page)", I should have used "parsed_page = Nokogiri::HTML(unparsed_page.body)"! Passing in the page body and not the page itself makes a critical difference with that deprecation error!
 
-Update 2: I have encountered a road block where I can display the news in terminal but there is always a deprecation warning associated with the httparty. After few hours of troubleshooting, I have realised that, instead of using "Nokogiri::HTML(unparsed_page)", I should have used "parsed_page = Nokogiri::HTML(unparsed_page.body)"! Passing in the page body and not the page itself makes a critical difference with that deprecation error!
+Update 2: Another issue I have encountered is how the terminal displays the text character-by-character. Although the display is quite neat, this often causes a split word at the end of the line that continues to the start of the next line. I have researched and tried different approaches, none of which has worked. Eventually, I discover the "word_wrap" gem that allows me to display a length of text without the split issue.  
 
 ### Implementation plan
 Features   |   Checklist   |    Implementation
