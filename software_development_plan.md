@@ -49,11 +49,15 @@ For the reading pleasure of the user, I aim to display the content in an eye-ple
 ### User interaction and experience
 At the beginning of the program, the user will see a welcome screen which displays 3 options: International news, national news and international sports. The user will use up and down arrow keys to select an appropriate option. This ensures the consistency of the input with little room for error. The user will be able to access 5 most recent headlines with a live update almost every few hours.
 
+### Flowchart
+![alt text](docs/FlowChart.png)
+
 ### Status update
 Update 1: I have encountered a road block where I can display the news in terminal but there is always a deprecation warning associated with the httparty. After few hours of troubleshooting, I have realised that, instead of using "Nokogiri::HTML(unparsed_page)", I should have used "parsed_page = Nokogiri::HTML(unparsed_page.body)"! Passing in the page body and not the page itself makes a critical difference with that deprecation error!
 
 Update 2: Another problem I have faced is how the terminal displays the text character-by-character. Although the display is quite neat, this often causes a split word at the end of the line that continues to the start of the next line. I have extensively researched and tried different approaches. Eventually, I discover the "word_wrap" gem that allows me to display a block of text without the word split issue.  
 
+[Trello link](https://trello.com/b/7UFhq0Hd/news-express-app)
 ### Implementation plan
 Features   |   Checklist   |    Implementation
 ----------------- | ------------- | --------------
@@ -61,3 +65,4 @@ Welcome screen | ASCII art for the name of the game. The screen will pause to co
 Main menu | - The main menu will provide 4 options: a) International news, b) National news, c) International sports news, d) quit. The user will be able to use up and down arrow key to select. | TTY-prompt gem will be used to implement this function, with selected item highlighted with a colour.
 Show news headlines and their content | Ideally the app will display the top 5 headlines to the user. These headlines will be evenly spaced with some colour highlight. | Use a combination of "httparty", "nokogiri" gems for web scraping. Use the "colorize" gem to add colour to the text string. Use "Geocoder" gem and built-in library "net/http" to identify the user location, which is then used to match the news of the user's country. I will effectively use commands to place line space or screen clear to ensure a good experience when browsing the news. Implement fast-type to add interest to the user when viewing the headlines.
 Handling connection errors | This app relies on the internet connection to locate the user. When the internet connection fails, there will be an error. Additionally, the web scraping identifies the css selectors. In case there is a change of html/css format from the source site. The error should be noted. | These exceptions/errors will be identified and rescued.
+
