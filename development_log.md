@@ -29,3 +29,5 @@
 * 26/04/20 18:00 - Presentation file made
 * 26/04/20 19:00 - All tests checked
 * 27/04/20 11:00 - Gems bundled
+* 27/04/20 13:00 - help.md file created
+* 27/04/20 14:00 - README.md updated
