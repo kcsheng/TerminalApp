@@ -27,4 +27,5 @@
 * 26/04/20 14:00 - Refactor code (DRY)
 * 26/04/20 16:00 - Validate my app with additional tests
 * 26/04/20 18:00 - Presentation file made
-* 26/04/20 19:00 - All tests completed
+* 26/04/20 19:00 - All tests checked
+* 27/04/20 11:00 - Gems bundled
