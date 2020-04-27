@@ -17,7 +17,7 @@ The terminal is an essential tool for Mac and Linux and I have always been amaze
 6. In the src folder, run news.rb in Ruby.
 ```
 > ruby news.rb
-
+```
 ### Statement of purpose and scope:
 This app will provide three options to the user including international and national news headlines and sports. Other features, such as weather, lifestyle and finance, may be added in the future. This app will be able to display international news and sports headlines upon release. With the national headlines, it requires significant amount of effort to identify source sites of news in different countries. As such, there will be only one country (Australia) to start off when the app is launched. This app is however equipped with the ability to identify the geographical location of the user. In future updates, there will be more countries included. Some users will then have the opportunity to view their national news from the terminal. For now, Australia is set as the default.
 
