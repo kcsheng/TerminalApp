@@ -1,6 +1,6 @@
 require_relative "./presentation"
+require_relative "./fetch"
 require "io/console"
-require "./fetch"
 require "word_wrap"
 require "word_wrap/core_ext"
 
