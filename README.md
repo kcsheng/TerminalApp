@@ -4,19 +4,31 @@ The terminal is an essential tool for Mac and Linux and I have always been amaze
 ### Installation instructions
 ***
 1. Before proceeding to download this app, it is assumed that you have Ruby installed in the system.
-2. If you download the zip file of this project, simply unzip it. Or you could download it via git clone in the directory desired.
-3. In your terminal, navigate into src of this project.
-4. To install gems that are required for this app, you need to have [bundler gem](https://rubygems.org/gems/bundler/versions/1.11.2) installed.
+2. Download the file via zip or git clone into your folder of choice. In your terminal, navigate into src of this project.
+3. Check whether you have [bundler gem](https://rubygems.org/gems/bundler/versions/1.11.2) installed.
+
+You could follow either of the following two steps to run this app.
+#### Option1
+ Install gems that are required for this app.
 ```
 > gem install bundler
 ```
-5. Install gem dependencies
+Install gem dependencies
 ```
 > bundle install
 ```
-6. In the src folder, run news.rb in Ruby.
+In the src folder, run news.rb in Ruby.
 ```
 > ruby news.rb
+```
+#### Option2
+In the command line, give execution permission to run_TerminalApp.sh
+```
+ chmod +x run_TerminalApp.sh
+```
+Run the run_TermialApp.sh script (please note that this command installs all gem dependencies.)
+```
+./run_TerminalApp.sh
 ```
 ### Statement of purpose and scope:
 This app will provide three options to the user including international and national news headlines and sports. Other features, such as weather, lifestyle and finance, may be added in the future. This app will be able to display international news and sports headlines upon release. With the national headlines, it requires significant amount of effort to identify source sites of news in different countries. As such, there will be only one country (Australia) to start off when the app is launched. This app is however equipped with the ability to identify the geographical location of the user. In future updates, there will be more countries included. Some users will then have the opportunity to view their national news from the terminal. For now, Australia is set as the default.
