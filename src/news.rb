@@ -1,8 +1,8 @@
 require_relative "./presentation"
-require 'io/console'
+require "io/console"
 require "./fetch"
 require "word_wrap"
-require 'word_wrap/core_ext'
+require "word_wrap/core_ext"
 
 clear
 logo
