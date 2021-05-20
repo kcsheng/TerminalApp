@@ -14,6 +14,6 @@ gem "colorize", "~> 0.8.1"
 
 gem "geocoder", "~> 1.6"
 
-gem "nokogiri", "~> 1.10"
+gem "nokogiri", "~> 1.11"
 
 gem "httparty", "~> 0.18.0"
